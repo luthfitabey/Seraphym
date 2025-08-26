@@ -1,25 +1,28 @@
 @extends('vendor.adminlte.page')
 
+@section('title', 'Manajemen Produk')
+
+@section('content_header')
+    <h1>Manajemen Produk</h1>
+@stop
+
 @section('content')
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-lg-12 margin-tb">
-                <div class="pull-left">
-                    <h2>Daftar Produk Parfum Mobil</h2>
-                </div>
-                <div class="pull-right">
-                    <a class="btn btn-success" href="{{ route('products.create') }}"> Tambah Produk Baru</a>
-                </div>
+    <div class="row">
+        <div class="col-lg-12 margin-tb">
+            <div class="pull-right">
+                <a class="btn btn-success" href="{{ route('products.create') }}"> Tambah Produk Baru</a>
             </div>
         </div>
+    </div>
 
-        @if ($message = Session::get('success'))
-            <div class="alert alert-success mt-2">
-                <p>{{ $message }}</p>
-            </div>
-        @endif
+    @if ($message = Session::get('success'))
+        <div class="alert alert-success mt-2">
+            <p>{{ $message }}</p>
+        </div>
+    @endif
 
-        <table class="table table-bordered mt-3">
+    <table class="table table-bordered mt-3">
+        <thead>
             <tr>
                 <th>No</th>
                 <th>Gambar</th>
@@ -27,10 +30,12 @@
                 <th>Harga</th>
                 <th width="280px">Aksi</th>
             </tr>
+        </thead>
+        <tbody>
             @foreach ($products as $product)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td><img src="/images/{{ $product->image }}" width="100px"></td>
+                    <td><img src="{{ asset('images/' . $product->image) }}" width="100px"></td>
                     <td>{{ $product->name }}</td>
                     <td>Rp. {{ number_format($product->price, 2, ',', '.') }}</td>
                     <td>
@@ -43,6 +48,6 @@
                     </td>
                 </tr>
             @endforeach
-        </table>
-    </div>
-@endsection
+        </tbody>
+    </table>
+@stop

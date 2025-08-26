@@ -192,6 +192,20 @@
                 <li class="nav-item">
                   <a class="nav-link p-0" href="#faqs">Faqs</a>
                 </li>
+                <li class="nav-item">
+                    @guest
+                        <a class="btn btn-dark text-uppercase mt-2 mt-lg-0" href="{{ route('login') }}">Login Admin</a>
+                    @else
+                        <a class="btn btn-dark text-uppercase mt-2 mt-lg-0" href="{{ route('products.index') }}">Dashboard Admin</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                        <a class="btn btn-dark text-uppercase mt-2 mt-lg-0" href="{{ route('logout') }}"
+                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            Logout
+                        </a>
+                    @endguest
+                </li>
               </ul>
             </div>
           </div>
@@ -332,67 +346,28 @@
         </div>
         <div class="product-content">
           <div class="row">
-            <div class="col-lg-4 col-md-6 mb-5" data-aos="fade-up">
-              <div class="product-card">
-                <div class="image-holder position-relative zoom-effect">
-                  <a href="#">
-                    <img src="{{ asset('fragrant/images/product-item1.jpg') }}" alt="product-item" class="img-fluid">
-                  </a>
-                  <div class="cart-concern position-absolute w-100 d-flex justify-content-center align-items-center">
-                    <div class="cart-button position-absolute">
-                      <button type="button" class="btn btn-dark text-uppercase" data-bs-toggle="modal" data-bs-target="#modallong"> tambah ke keranjang </button>
+            @foreach ($products as $product)
+                <div class="col-lg-4 col-md-6 mb-5" data-aos="fade-up">
+                    <div class="product-card">
+                        <div class="image-holder position-relative zoom-effect">
+                            <a href="#">
+                                <img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->name }}" class="img-fluid">
+                            </a>
+                            <div class="cart-concern position-absolute w-100 d-flex justify-content-center align-items-center">
+                                <div class="cart-button position-absolute">
+                                    <button type="button" class="btn btn-dark text-uppercase" data-bs-toggle="modal" data-bs-target="#modallong"> tambah ke keranjang </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-detail mt-3 text-center">
+                            <h3 class="card-title fs-4 mb-2 mt-0">
+                                <a href="single-product.html" class="text-secondary text-uppercase">{{ $product->name }}</a>
+                            </h3>
+                            <div class="card-price text-secondary fs-3">Rp. {{ number_format($product->price, 2, ',', '.') }}</div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <div class="card-detail mt-3 text-center">
-                  <h3 class="card-title fs-4 mb-2 mt-0">
-                    <a href="single-product.html" class="text-secondary text-uppercase">Aroma Kayu Manis</a>
-                  </h3>
-                  <div class="card-price text-secondary fs-3">$15</div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-5" data-aos="fade-up" data-aos-delay="200">
-              <div class="product-card">
-                <div class="image-holder position-relative zoom-effect">
-                  <a href="#">
-                    <img src="{{ asset('fragrant/images/product-item2.jpg') }}" alt="product-item" class="img-fluid">
-                  </a>
-                  <div class="cart-concern position-absolute w-100 d-flex justify-content-center align-items-center">
-                    <div class="cart-button position-absolute">
-                      <button type="button" class="btn btn-dark text-uppercase" data-bs-toggle="modal" data-bs-target="#modallong"> tambah ke keranjang </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-detail mt-3 text-center">
-                  <h3 class="card-title fs-4 mb-2 mt-0">
-                    <a href="single-product.html" class="text-secondary text-uppercase">Ekstrak Lemon & Serai</a>
-                  </h3>
-                  <div class="card-price text-secondary fs-3">$18 <del>$22</del>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-5" data-aos="fade-up" data-aos-delay="400">
-              <div class="product-card">
-                <div class="image-holder position-relative zoom-effect">
-                  <a href="#">
-                    <img src="{{ asset('fragrant/images/product-item3.jpg') }}" alt="product-item" class="img-fluid">
-                  </a>
-                  <div class="cart-concern position-absolute w-100 d-flex justify-content-center align-items-center">
-                    <div class="cart-button position-absolute">
-                      <button type="button" class="btn btn-dark text-uppercase" data-bs-toggle="modal" data-bs-target="#modallong"> tambah ke keranjang </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-detail mt-3 text-center">
-                  <h3 class="card-title fs-4 mb-2 mt-0">
-                    <a href="single-product.html" class="text-secondary text-uppercase">Aroma Kopi Hitam</a>
-                  </h3>
-                  <div class="card-price text-secondary fs-3">$16</div>
-                </div>
-              </div>
-            </div>
+            @endforeach
           </div>
         </div>
       </div>

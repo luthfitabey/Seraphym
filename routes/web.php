@@ -12,6 +12,6 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Auth::routes();
 
 // Grup rute admin yang dilindungi oleh middleware 'auth' dan 'admin'
-Route::middleware(['auth', 'admin'])->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::resource('products', ProductController::class);
 });

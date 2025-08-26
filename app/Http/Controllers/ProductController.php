@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use JeroenNoten\LaravelAdminLte\Http\Controllers\Controller as AdminLteController;
 
-class ProductController extends Controller
+class ProductController extends AdminLteController
 {
     public function index()
     {

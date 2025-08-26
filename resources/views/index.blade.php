@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fragrance - Free Perfume Shop Landing Page</title>
+    <title>Scentedrive - Parfum Mobil Tradisional & Natural</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +9,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="author" content="">
     <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="description" content="Bootstrap 5 Landing Page HTML CSS Template">
+    <meta name="description" content="Scentedrive - Parfum Mobil Tradisional & Natural - Landing Page">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="{{ asset('fragrant/css/vendor.css') }}">
@@ -18,6 +17,93 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bs-body-bg: #f5f5dc; /* Warna krem natural */
+            --bs-body-color: #4a2c2a; /* Coklat tua */
+            --bs-link-color: #8b4513; /* Coklat sadel */
+            --bs-link-hover-color: #a0522d; /* Coklat sienna */
+            --bs-primary: #8b4513;
+            --bs-secondary: #fff;
+        }
+
+        body {
+            background-color: var(--bs-body-bg) !important;
+            color: var(--bs-body-color) !important;
+            transition: background-color 0.5s ease;
+        }
+
+        .text-black {
+            color: #1a1a1a !important;
+        }
+
+        .bg-primary {
+            background-color: #8b4513 !important;
+        }
+
+        .text-primary {
+            color: #8b4513 !important;
+        }
+
+        .text-secondary {
+            color: #4a2c2a !important;
+        }
+
+        .bg-linear {
+            background: linear-gradient(135deg, #d2b48c, #f5f5dc);
+        }
+
+        .navbar-brand img {
+            filter: none; /* Tidak ada filter untuk logo natural */
+        }
+
+        .site-header .nav-link {
+            color: #fff !important;
+            transition: color 0.3s ease;
+        }
+
+        .site-header .nav-link:hover {
+            color: #d2b48c !important;
+        }
+
+        .product-card {
+            background-color: #d2b48c; /* Coklat muda */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-light {
+            background-color: #4a2c2a;
+            color: #fff;
+            border-color: #4a2c2a;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-light:hover {
+            background-color: #6a4442;
+            border-color: #6a4442;
+            transform: scale(1.05);
+        }
+
+        .btn-dark {
+            background-color: #d2b48c;
+            color: #4a2c2a;
+            border-color: #4a2c2a;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-dark:hover {
+            background-color: #c0a07c;
+            border-color: #4a2c2a;
+            transform: scale(1.05);
+        }
+
+        .accordion-button.collapsed {
+            color: var(--bs-body-color) !important;
+        }
+    </style>
   </head>
   <body class="bg-body" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -65,7 +151,7 @@
         <path fill="currentColor" d="M12.244 4c.534.003 1.87.016 3.29.073l.504.022c1.429.067 2.857.183 3.566.38c.945.266 1.687 1.04 1.938 2.022c.4 1.56.45 4.602.456 5.339l.001.152v.174c-.007.737-.057 3.78-.457 5.339c-.254.985-.997 1.76-1.938 2.022c-.709.197-2.137.313-3.566.38l-.504.023c-1.42.056-2.756.07-3.29.072l-.235.001h-.255c-1.13-.007-5.856-.058-7.36-.476c-.944-.266-1.687-1.04-1.938-2.022c-.4-1.56-.45-4.602-.456-5.339v-.326c.006-.737.056-3.78.456-5.339c.254-.985.997-1.76 1.939-2.021c1.503-.419 6.23-.47 7.36-.476h.489ZM9.999 8.5v7l6-3.5l-6-3.5Z" />
       </symbol>
     </svg>
-    <header id="header" class="site-header text-black bg-primary fixed-top">
+    <header id="header" class="site-header bg-primary fixed-top">
       <nav id="header-nav" class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
@@ -98,10 +184,10 @@
                   <a class="nav-link p-0" href="#testimonials">Reviews</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link p-0" href="#featured-products">Perfumes</a>
+                  <a class="nav-link p-0" href="#featured-products">Parfum Mobil</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link p-0" href="#company-services">Services</a>
+                  <a class="nav-link p-0" href="#company-services">Layanan</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link p-0" href="#faqs">Faqs</a>
@@ -115,27 +201,27 @@
     <section id="intro" class="bg-linear py-lg-7">
       <div class="container">
         <div class="row g-md-5 align-items-center">
-          <div class="col-lg-5 col-md-12">
+          <div class="col-lg-5 col-md-12" data-aos="fade-right">
             <div class="banner-image">
-              <img src="{{ asset('fragrant/images/banner-image1.png') }}" alt="banner" class="img-fluid">
+              <img src="{{ asset('fragrant/images/product-item1.jpg') }}" alt="banner" class="img-fluid">
             </div>
           </div>
-          <div class="col-lg-7 col-md-12">
+          <div class="col-lg-7 col-md-12" data-aos="fade-left">
             <div class="banner-content text-center p-5">
-              <h1 class="display-1 text-center">Essence of Elegance</h1>
-              <p class="fs-5">Immerse yourself in a symphony of delightful notes that dance upon your skin. Our perfumes blend artistry and passion, capturing the essence of femininity and allure. Enchanting aromas transport you to a realm of pure indulgence.</p>
-              <a href="shop.html" class="btn btn-lg btn-light mt-3">Order Now</a>
+              <h1 class="display-1 text-center">Kesegaran Alami untuk Mobil Anda</h1>
+              <p class="fs-5">Kembali ke alam dengan wewangian tradisional kami. Terbuat dari bahan-bahan alami, setiap aroma menghadirkan ketenangan dan kesegaran di perjalanan Anda.</p>
+              <a href="shop.html" class="btn btn-lg btn-light mt-3">Pesan Sekarang</a>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="about" class="py-lg-9">
+    <section id="about" class="py-lg-9" data-aos="fade-up">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-11 border-top border-bottom py-5">
             <blockquote class="text-center mx-auto fs-1">
-              <p>Immerse yourself in a symphony of delightful notes that dance upon your skin. Our perfumes blend artistry and passion, capturing the essence of femininity and allure. Enchanting aromas transport you to a realm of pure indulgence.</p>
+              <p>Scentedrive: Kesegaran Alami dalam Setiap Tetes. Diciptakan dari bahan-bahan tradisional, setiap aroma adalah perjalanan kembali ke alam yang menyegarkan.</p>
             </blockquote>
           </div>
         </div>
@@ -144,37 +230,37 @@
     <section id="overview" class="py-lg-10 pt-lg-0">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-4">
+          <div class="col-lg-4" data-aos="fade-right">
             <div class="featured-item mb-5 text-center">
-              <h3 class="fs-4 text-uppercase mb-1">Wireless Connectivity</h3>
-              <p class="fs-5">Seamlessly connect to your devices Bluetooth for a tangle-free listening experience.</p>
+              <h3 class="fs-4 text-uppercase mb-1">Tradisional</h3>
+              <p class="fs-5">Menggunakan resep kuno dan bahan-bahan tradisional untuk aroma yang otentik.</p>
             </div>
             <div class="featured-item mb-5 text-center">
-              <h3 class="fs-4 text-uppercase mb-1">Long Battery Life</h3>
-              <p class="fs-5">Enjoy hours of uninterrupted music with the long-lasting battery of Heady headphones.</p>
+              <h3 class="fs-4 text-uppercase mb-1">Tahan Lama</h3>
+              <p class="fs-5">Aroma yang alami dan tahan lama, menemani Anda di setiap perjalanan.</p>
             </div>
             <div class="featured-item mb-5 text-center">
-              <h3 class="fs-4 text-uppercase mb-1">Sleek Design</h3>
-              <p class="fs-5">Show off the stylish and sleek design of the headphones, available in various colors.</p>
+              <h3 class="fs-4 text-uppercase mb-1">Ramah Lingkungan</h3>
+              <p class="fs-5">Produk kami terbuat dari bahan-bahan alami dan kemasan yang ramah lingkungan.</p>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4" data-aos="fade-up">
             <div class="image-holder text-center">
-              <img src="{{ asset('fragrant/images/single-image1.png') }}" alt="headphone" class="img-fluid">
+              <img src="{{ asset('fragrant/images/single-image1.png') }}" alt="parfum" class="img-fluid">
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4" data-aos="fade-left">
             <div class="featured-item mb-5 text-center">
-              <h3 class="fs-5 text-uppercase mb-1">Superior Sound Quality</h3>
-              <p class="fs-5">Enjoy rich, immersive sound with high-fidelity audio technology from heady.</p>
+              <h3 class="fs-5 text-uppercase mb-1">Pilihan Natural</h3>
+              <p class="fs-5">Terbuat dari bunga, rempah-rempah, dan minyak esensial alami.</p>
             </div>
             <div class="featured-item mb-5 text-center">
-              <h3 class="fs-5 text-uppercase mb-1">Noise Isolation</h3>
-              <p class="fs-5">Block out external distractions immerse you in your music and yourself in your music.</p>
+              <h3 class="fs-5 text-uppercase mb-1">Ciptakan Ketenangan</h3>
+              <p class="fs-5">Aroma yang menenangkan pikiran dan menghilangkan stres di jalan.</p>
             </div>
             <div class="featured-item mb-5 text-center">
-              <h3 class="fs-5 text-uppercase mb-1">Comfortable Fit</h3>
-              <p class="fs-5">Designed with plush ear cushions and an adjustable headband for listening sessions.</p>
+              <h3 class="fs-5 text-uppercase mb-1">Desain Sederhana</h3>
+              <p class="fs-5">Bentuk yang minimalis dan elegan, cocok untuk interior mobil Anda.</p>
             </div>
           </div>
         </div>
@@ -184,7 +270,7 @@
       <div class="row">
         <div class="video-content open-up" data-aos="zoom-out">
           <div class="video-bg position-relative">
-            <img src="images/video-item.jpg" alt="video" class="img-fluid">
+            <img src="{{ asset('fragrant/images/video-item.jpg') }}" alt="video" class="img-fluid">
             <div class="player position-absolute d-flex justify-content-center align-items-center">
               <a class='youtube play-btn d-flex justify-content-center align-items-center bg-white-trans rounded-pill' href="https://www.youtube.com/embed/Cs-7dLsjG9Q?si=VwNVax-UNfZqpVQr">
                 <svg class="play text-dark" width="32" height="42">
@@ -196,7 +282,7 @@
         </div>
       </div>
     </section>
-    <section id="testimonials" class="position-relative py-lg-11">
+    <section id="testimonials" class="position-relative py-lg-11" data-aos="fade-up">
       <div class="container">
         <div class="row">
           <div class="review-content position-relative d-flex">
@@ -209,25 +295,25 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="review-item col-md-11">
-                    <blockquote class="fs-1">This perfume is a sensory masterpiece! Every time I wear it, I'm enveloped in a cloud of elegance and sophistication. It's become my signature scent.</blockquote>
+                    <blockquote class="fs-1">Parfum ini membuat mobil saya terasa seperti berada di tengah hutan pinus. Sangat segar dan menenangkan.</blockquote>
                     <div class="author-detail">
-                      <div class="name fs-4 text-secondary text-uppercase pt-2">- Joshima Lin</div>
+                      <div class="name fs-4 text-secondary text-uppercase pt-2">- Budi S.</div>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="review-item col-md-11">
-                    <blockquote class="fs-1">Some women wear perfume to feel good about them, others like to gain the compliments from their loved ones.</blockquote>
+                    <blockquote class="fs-1">Aroma rempah-rempahnya sangat unik dan tahan lama. Saya suka bagaimana baunya tidak terlalu menyengat.</blockquote>
                     <div class="author-detail">
-                      <div class="name fs-4 text-secondary text-uppercase pt-2">- Emma Turner</div>
+                      <div class="name fs-4 text-secondary text-uppercase pt-2">- Siti A.</div>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="review-item col-md-11">
-                    <blockquote class="fs-1">As the power of smell can trigger sense receptors, which then send messages to the part of your brain that controls your mood.</blockquote>
+                    <blockquote class="fs-1">Akhirnya menemukan parfum mobil yang tidak membuat saya pusing. Aroma alaminya sangat nyaman.</blockquote>
                     <div class="author-detail">
-                      <div class="name fs-4 text-secondary text-uppercase pt-2">- Emma Turner</div>
+                      <div class="name fs-4 text-secondary text-uppercase pt-2">- Anton K.</div>
                     </div>
                   </div>
                 </div>
@@ -240,13 +326,13 @@
     </section>
     <section id="featured-products">
       <div class="container-lg">
-        <div class="display-header mt-0 text-center mb-5">
-          <h2 class="display-4 text-uppercase">Check our perfumes</h2>
-          <p class="fs-5">Check it out our varieties of colorful headphones.</p>
+        <div class="display-header mt-0 text-center mb-5" data-aos="fade-down">
+          <h2 class="display-4 text-uppercase">Produk Unggulan Kami</h2>
+          <p class="fs-5">Temukan berbagai pilihan wewangian natural untuk mobil Anda.</p>
         </div>
         <div class="product-content">
           <div class="row">
-            <div class="col-lg-4 col-md-6 mb-5">
+            <div class="col-lg-4 col-md-6 mb-5" data-aos="fade-up">
               <div class="product-card">
                 <div class="image-holder position-relative zoom-effect">
                   <a href="#">
@@ -254,19 +340,19 @@
                   </a>
                   <div class="cart-concern position-absolute w-100 d-flex justify-content-center align-items-center">
                     <div class="cart-button position-absolute">
-                      <button type="button" class="btn btn-dark text-uppercase" data-bs-toggle="modal" data-bs-target="#modallong"> add to cart </button>
+                      <button type="button" class="btn btn-dark text-uppercase" data-bs-toggle="modal" data-bs-target="#modallong"> tambah ke keranjang </button>
                     </div>
                   </div>
                 </div>
                 <div class="card-detail mt-3 text-center">
                   <h3 class="card-title fs-4 mb-2 mt-0">
-                    <a href="single-product.html" class="text-secondary text-uppercase">Best Perfume</a>
+                    <a href="single-product.html" class="text-secondary text-uppercase">Aroma Kayu Manis</a>
                   </h3>
-                  <div class="card-price text-secondary fs-3">$290</div>
+                  <div class="card-price text-secondary fs-3">$15</div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-5">
+            <div class="col-lg-4 col-md-6 mb-5" data-aos="fade-up" data-aos-delay="200">
               <div class="product-card">
                 <div class="image-holder position-relative zoom-effect">
                   <a href="#">
@@ -274,20 +360,20 @@
                   </a>
                   <div class="cart-concern position-absolute w-100 d-flex justify-content-center align-items-center">
                     <div class="cart-button position-absolute">
-                      <button type="button" class="btn btn-dark text-uppercase" data-bs-toggle="modal" data-bs-target="#modallong"> add to cart </button>
+                      <button type="button" class="btn btn-dark text-uppercase" data-bs-toggle="modal" data-bs-target="#modallong"> tambah ke keranjang </button>
                     </div>
                   </div>
                 </div>
                 <div class="card-detail mt-3 text-center">
                   <h3 class="card-title fs-4 mb-2 mt-0">
-                    <a href="single-product.html" class="text-secondary text-uppercase">Best Perfume</a>
+                    <a href="single-product.html" class="text-secondary text-uppercase">Ekstrak Lemon & Serai</a>
                   </h3>
-                  <div class="card-price text-secondary fs-3">$290 <del>$350</del>
+                  <div class="card-price text-secondary fs-3">$18 <del>$22</del>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-5">
+            <div class="col-lg-4 col-md-6 mb-5" data-aos="fade-up" data-aos-delay="400">
               <div class="product-card">
                 <div class="image-holder position-relative zoom-effect">
                   <a href="#">
@@ -295,15 +381,15 @@
                   </a>
                   <div class="cart-concern position-absolute w-100 d-flex justify-content-center align-items-center">
                     <div class="cart-button position-absolute">
-                      <button type="button" class="btn btn-dark text-uppercase" data-bs-toggle="modal" data-bs-target="#modallong"> add to cart </button>
+                      <button type="button" class="btn btn-dark text-uppercase" data-bs-toggle="modal" data-bs-target="#modallong"> tambah ke keranjang </button>
                     </div>
                   </div>
                 </div>
                 <div class="card-detail mt-3 text-center">
                   <h3 class="card-title fs-4 mb-2 mt-0">
-                    <a href="single-product.html" class="text-secondary text-uppercase">Best Perfume</a>
+                    <a href="single-product.html" class="text-secondary text-uppercase">Aroma Kopi Hitam</a>
                   </h3>
-                  <div class="card-price text-secondary fs-3">$290</div>
+                  <div class="card-price text-secondary fs-3">$16</div>
                 </div>
               </div>
             </div>
@@ -311,7 +397,7 @@
         </div>
       </div>
     </section>
-    <section id="company-services" class="py-lg-7">
+    <section id="company-services" class="py-lg-7" data-aos="fade-up">
       <div class="container-lg">
         <div class="row">
           <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
@@ -322,8 +408,8 @@
                 </svg>
               </div>
               <div class="icon-box-content ps-3">
-                <h4 class="fs-3 fw-600 text-capitalize">100% high quality product</h4>
-                <p class="fs-5">We have option of pick up in store</p>
+                <h4 class="fs-3 fw-600 text-capitalize">100% Produk Natural</h4>
+                <p class="fs-5">Kami menjamin setiap produk terbuat dari bahan-bahan alami terbaik.</p>
               </div>
             </div>
           </div>
@@ -335,8 +421,8 @@
                 </svg>
               </div>
               <div class="icon-box-content ps-3">
-                <h4 class="fs-3 fw-600 text-capitalize">Free shipping charge</h4>
-                <p class="fs-5">Inside City delivery within 5 days</p>
+                <h4 class="fs-3 fw-600 text-capitalize">Pengiriman Cepat</h4>
+                <p class="fs-5">Pesanan Anda akan tiba dalam 3-5 hari kerja.</p>
               </div>
             </div>
           </div>
@@ -348,42 +434,42 @@
                 </svg>
               </div>
               <div class="icon-box-content ps-3">
-                <h4 class="fs-3 fw-600 text-capitalize">Money back guarantee</h4>
-                <p class="fs-5">We will take return in some cases</p>
+                <h4 class="fs-3 fw-600 text-capitalize">Jaminan Kualitas</h4>
+                <p class="fs-5">Jika tidak puas, uang kembali atau ganti produk baru.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="faqs" class="py-lg-8">
+    <section id="faqs" class="py-lg-8" data-aos="fade-up">
       <div class="container-lg">
         <div class="row align-items-center">
-          <h2 class="display-4 text-uppercase mt-0 text-center">FAQs Section</h2>
+          <h2 class="display-4 text-uppercase mt-0 text-center">FAQ</h2>
           <div class="col-lg-8 mx-auto">
             <div class="accordion" id="accordionExample">
               <div class="accordion-item border-0 border-bottom">
                 <h2 class="accordion-header m-0" id="headingOne">
-                  <button class="accordion-button fs-3 fw-light text-secondary text-uppercase bg-transparent px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Are your Perfumes Branded?</button>
+                  <button class="accordion-button fs-3 fw-light text-secondary text-uppercase bg-transparent px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Apakah parfum ini aman untuk anak-anak?</button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">Yes, our each and every product are branded.</div>
+                  <div class="accordion-body">Ya, semua produk kami terbuat dari minyak esensial alami yang aman untuk dihirup.</div>
                 </div>
               </div>
               <div class="accordion-item border-0 border-bottom">
-                <h2 class="accordion-heade m-0" id="headingTwo">
-                  <button class="accordion-button fs-3 fw-light text-secondary text-uppercase bg-transparent px-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">How long does the fragnance last?</button>
+                <h2 class="accordion-header m-0" id="headingTwo">
+                  <button class="accordion-button fs-3 fw-light text-secondary text-uppercase bg-transparent px-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Bagaimana cara menggunakan parfum ini di mobil?</button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">A full warranty may be active for just a limited time after the item is purchased, perhaps 60 or 90 days, or it may cover the product "for life" (the same goes for limited warranties). </div>
+                  <div class="accordion-body">Gantungkan di spion tengah atau letakkan di dekat ventilasi AC agar aroma menyebar merata.</div>
                 </div>
               </div>
               <div class="accordion-item border-0 border-bottom">
                 <h2 class="accordion-header m-0" id="headingThree">
-                  <button class="accordion-button fs-3 fw-light text-secondary text-uppercase bg-transparent px-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Can I replace the product?</button>
+                  <button class="accordion-button fs-3 fw-light text-secondary text-uppercase bg-transparent px-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Berapa lama aroma dapat bertahan?</button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">Yes, you can replace your product with an incident of accidental damage.</div>
+                  <div class="accordion-body">Rata-rata, aroma bertahan hingga 45 hari, tergantung pada suhu dan aliran udara.</div>
                 </div>
               </div>
             </div>
@@ -391,10 +477,10 @@
         </div>
       </div>
     </section>
-    <section id="instagram" class="py-lg-7">
+    <section id="instagram" class="py-lg-7" data-aos="fade-up">
       <div class="container-lg">
         <div class="row">
-          <h2 class="display-4 text-uppercase text-center">Instagram #YourBrand</h2>
+          <h2 class="display-4 text-uppercase text-center">Instagram #Scentedrive</h2>
           <div class="col-lg-2 col-md-6 mb-3">
             <img src="{{ asset('fragrant/images/insta-item1.jpg') }}" alt="instagram" class="img-fluid">
           </div>
@@ -416,18 +502,18 @@
         </div>
       </div>
     </section>
-    <section id="subscribe" class="py-lg-6 bg-linear">
+    <section id="subscribe" class="py-lg-6 bg-linear" data-aos="fade-up">
       <div class="container">
         <div class="row d-flex justify-content-center">
           <div class="col-lg-6">
             <div class="subscribe-content">
               <div class="subscribe-header text-center">
-                <h2 class="display-4 text-uppercase">Subscribe Us</h2>
-                <p class="fs-5">Subscribe to our newsletter for discounts and updates.</p>
+                <h2 class="display-4 text-uppercase">Berlangganan</h2>
+                <p class="fs-5">Dapatkan penawaran dan wewangian terbaru langsung di kotak masuk Anda.</p>
               </div>
               <form id="form" class="py-5 position-relative">
-                <input type="text" name="email" placeholder="Your email address" class="w-100 bg-transparent border-0 border-bottom text-secondary fs-5">
-                <button type="button" class="btn-subscribe text-secondary position-absolute border-0 bg-transparent text-uppercase">Subscribe</button>
+                <input type="text" name="email" placeholder="Alamat email Anda" class="w-100 bg-transparent border-0 border-bottom text-secondary fs-5">
+                <button type="button" class="btn-subscribe text-secondary position-absolute border-0 bg-transparent text-uppercase">Berlangganan</button>
               </form>
               <div class="social-links">
                 <ul class="list-unstyled d-flex flex-wrap gap-3 justify-content-center">
@@ -474,7 +560,7 @@
       </div>
     </section>
     <div class="footer-bottom text-center py-3">
-      <p>© 2023 Fragrant. Designed by <a href="https://templatesjungle.com/" class="text-dark">
+      <p>© 2023 Scentedrive. Didesain oleh <a href="https://templatesjungle.com/" class="text-dark">
           <strong>TemplatesJungle</strong>
         </a>
       </p>
@@ -487,4 +573,3 @@
     <script src="{{ asset('fragrant/js/script.js') }}"></script>
   </body>
 </html>
-

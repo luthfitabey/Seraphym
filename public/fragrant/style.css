@@ -527,3 +527,29 @@ a {
 #form input::placeholder {
   color: var(--bs-secondary);
 }
+/* Custom Animations for Smoothness */
+.aos-init {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(20px);
+}
+
+[data-aos="fade-down"] {
+  transform: translateY(-20px);
+}
+
+[data-aos="fade-left"] {
+  transform: translateX(20px);
+}
+
+[data-aos="fade-right"] {
+  transform: translateX(-20px);
+}
